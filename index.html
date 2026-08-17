@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-yH0wT1f8n7o8eE8n4bWLRG4RxF4HIMEI2pCH8l9/Q2DdAsnVtCxCQwTB/28tOHEdviSeKxTvJm3zuDLXxM8pQA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
       :root {
@@ -184,7 +184,7 @@
         overflow: hidden;
       }
 
-      .hero .stagetext { font-family: 'JetBrains Mono', monospace; color: var(--blue-soft); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 0.8rem; opacity: 0; transform: translateY(18px); }
+      .hero .stagetext { font-family: 'JetBrains Mono', monospace; color: var(--blue-soft); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 0.8rem; opacity: 0; transform: translateY(-8px); display: inline-block; }
       .hero .stagetext.revealed { animation: fadeUp 0.7s ease forwards; }
 
       .hero h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(3.5rem, 8vw, 7rem); color: var(--white-pure); line-height: 1; letter-spacing: -0.03em; margin: 0; }
@@ -335,7 +335,7 @@
       }
 
       .tech-item h3 { margin: 0 0 0.45rem; font-family: 'Space Grotesk', sans-serif; font-weight: 600; color: var(--white-pure); }
-      .tech-item p { margin: 0 0.8rem; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--white-mutd); }
+      .tech-item p { margin: 0 0.8rem; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--white-muted); }
 
       .progress-wrapper { background: var(--bg-elevated); border-radius: 99px; height: 10px; overflow: hidden; }
       .progress-fill {
@@ -379,7 +379,7 @@
       .project-content h3 { margin: 0 0 0.4rem; font-family: 'Syne', sans-serif; font-weight: 700; color: var(--white-pure); }
       .project-content p { margin: 0 0 0.8rem; color: var(--white-muted); line-height: var(--base-line); }
       .project-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.8rem; }
-      .project-tag { padding: 0.2rem 0.55rem; border-radius: 99px; background: rgba(30,111,255,0.12); border: 1px solid rgba(30,111,255,0.3); color: var(--blue-soft); font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; }
+      .project-tag { padding: 0.2rem 0.55rem; border-radius: 99px; background: rgba(30,111,255,0.12); border: 1px solid rgba(30,111,255,0.3); color: var(--blue-soft); font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; }
 
       .project-links { display: flex; gap: 0.6rem; }
       .project-links a {
@@ -466,7 +466,7 @@
       .footer-nav a:hover::after { width: 100%; }
 
       .cursor-ring, .cursor-dot { position: fixed; pointer-events: none; z-index: 9999; mix-blend-mode: difference; }
-      .cursor-ring { width: 32px; height: 32px; border: 1.5px solid var(--blue-bright); border-radius: 50%; transform: translate(-50%, -50%); transition: transform 0.12s ease, width 0.12s ease, height 0.12s ease, opacity 0.2s ease; }
+      .cursor-ring { width: 32px; height: 32px; border: 1.5px solid var(--blue-bright); border-radius: 50%; transform: translate(-50%, -50%); transition: transform 0.12s ease, width 0.12s ease, height 0.12s ease; }
       .cursor-dot { width: 6px; height: 6px; background: var(--white-pure); border-radius: 50%; transform: translate(-50%, -50%); }
       .cursor-ring.hover { width: 46px; height: 46px; border-color: var(--blue-soft); }
 
@@ -483,7 +483,7 @@
       @media (max-width: 768px) {
         header { padding: 0.65rem 1rem; }
         .menu-toggle { display: block; }
-        nav { position: absolute; top: 65px; right: 1rem; background: rgba(2, 4, 8, 0.95); border: 1px solid var(--glass-border); border-radius: 12px; padding: 0.7rem; display: none; flex-direction: column; min-width: 180px; }
+        nav { position: absolute; top: 65px; right: 1rem; background: rgba(2, 4, 8, 0.95); border: 1px solid var(--glass-border); border-radius: 12px; padding: 0.7rem; display: none; flex-direction: column; }
         nav.open { display: flex; }
         nav .nav-link { padding: 0.55rem 0; }
         main { margin-top: 70px; }
@@ -540,12 +540,13 @@
         <h2 class="section-title">Sobre Mim</h2>
         <div class="about-wrapper">
           <div class="about-text">
-            <p>Meu nome é Felipe Xavier, tenho 17 anos e sou apaixonado por design e tecnologia.</p>
-            <p>Atuo no desenvolvimento de soluções digitais modernas, com foco em criar produtos eficientes, bem estruturados e com boa experiência para o usuário.</p>
-            <p>Meu objetivo é ajudar negócios a crescer por meio de tecnologia prática, inovação e soluções acessíveis.</p>
-            <p><strong>Email:</strong> felipexreisjj@gmail.com</p>
-            <p><strong>Local:</strong> Brasil</p>
-          </div>
+  <p>Sou Felipe Xavier, estudante de Engenharia de Software e desenvolvedor web com 17 anos. Sou apaixonado por design e tecnologia e gosto de unir estética e boa engenharia para criar produtos digitais práticos, rápidos e com excelente experiência para o usuário.</p>
+  <p>Atualmente curso Engenharia de Software, o que complementa minha prática com fundamentos em arquitetura, testes, qualidade de código e metodologias ágeis — ajudando-me a entregar soluções escaláveis e fáceis de manter.</p>
+  <p>Trabalho com desenvolvimento front-end, integrações back-end e plataformas no-code quando faz sentido ao projeto. Meu foco é transformar ideias em produtos reais, priorizando usabilidade, desempenho e uma arquitetura bem pensada.</p>
+  <p>Estou aberto a freelances e parcerias que valorizem qualidade, inovação e resultados mensuráveis.</p>
+  <p><strong>Email:</strong> felipexreisjj@gmail.com</p>
+  <p><strong>Local:</strong> Brasil</p>
+</div>
           <div class="about-visual" aria-hidden="true">
             <div class="counters">
               <div class="counter-card"><div class="counter" data-target="17">0</div><div class="label">anos</div></div>
@@ -591,7 +592,7 @@
               <h3>Calculadora de Idade</h3>
               <p>Calculadora de idade por ano de nascimento.</p>
               <div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JavaScript</span></div>
-              <div class="project-links"><a href="https://felipexavier-08.github.io/Calculadora-de-idade/" target="_blank" rel="noopener">Ao vivo <i class="fa-solid fa-arrow-right"></i></a><a href="https://github.com/felipexavier-08/Calculadora-de-idade" target="_blank" rel="noopener">GitHub <i class="fa-solid fa-arrow-right"></i></a></div>
+              <div class="project-links"><a href="https://felipexavier-08.github.io/Calculadora-de-idade/" target="_blank" rel="noopener">Ao vivo <i class="fa-solid fa-arrow-right"></i></a></div>
             </div>
           </article>
 
@@ -611,7 +612,7 @@
               <h3>Site de Transportadora</h3>
               <p>Landing page de transportadora responsiva.</p>
               <div class="project-tags"><span class="project-tag">HTML</span><span class="project-tag">CSS</span><span class="project-tag">JavaScript</span></div>
-              <div class="project-links"><a href="https://felipexavier-08.github.io/site-transportadora/" target="_blank" rel="noopener">Ao vivo <i class="fa-solid fa-arrow-right"></i></a><a href="https://github.com/felipexavier-08/site-transportadora" target="_blank" rel="noopener">GitHub <i class="fa-solid fa-arrow-right"></i></a></div>
+              <div class="project-links"><a href="https://felipexavier-08.github.io/site-transportadora/" target="_blank" rel="noopener">Ao vivo <i class="fa-solid fa-arrow-right"></i></a></div>
             </div>
           </article>
         </div>
